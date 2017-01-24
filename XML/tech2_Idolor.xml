@@ -1,0 +1,127 @@
+
+  <data>
+    <location>
+      <location-key>point1</location-key>
+      <point latitude="34.23" longitude="-118.52"/>
+    </location>
+ ]
+    <time-layout time-coordinate="local" summarization="12hourly">
+      <layout-key>k-p24h-n5-1</layout-key>
+      <start-valid-time period-name="Tomorrow">2016-05-11T06:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-11T18:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Thursday">2016-05-12T06:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-12T18:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Friday">2016-05-13T06:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-13T18:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Saturday">2016-05-14T06:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-14T18:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Sunday">2016-05-15T06:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-15T18:00:00-07:00</end-valid-time>
+    </time-layout>
+    <time-layout time-coordinate="local" summarization="12hourly">
+      <layout-key>k-p24h-n5-2</layout-key>
+      <start-valid-time period-name="Tonight">2016-05-10T18:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-11T06:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Tomorrow Night">2016-05-11T18:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-12T06:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Thursday Night">2016-05-12T18:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-13T06:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Friday Night">2016-05-13T18:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-14T06:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Saturday Night">2016-05-14T18:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-15T06:00:00-07:00</end-valid-time>
+    </time-layout>
+    <time-layout time-coordinate="local" summarization="12hourly">
+      <layout-key>k-p12h-n10-3</layout-key>
+      <start-valid-time period-name="Tuesday Night">2016-05-10T18:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-11T06:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Wednesday">2016-05-11T06:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-11T18:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Wednesday Night">2016-05-11T18:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-12T06:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Thursday">2016-05-12T06:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-12T18:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Thursday Night">2016-05-12T18:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-13T06:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Friday">2016-05-13T06:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-13T18:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Friday Night">2016-05-13T18:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-14T06:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Saturday">2016-05-14T06:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-14T18:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Saturday Night">2016-05-14T18:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-15T06:00:00-07:00</end-valid-time>
+      <start-valid-time period-name="Sunday">2016-05-15T06:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-15T18:00:00-07:00</end-valid-time>
+    </time-layout>
+    <time-layout time-coordinate="local" summarization="12hourly">
+      <layout-key>k-p5d-n1-4</layout-key>
+      <start-valid-time>2016-05-10T18:00:00-07:00</start-valid-time>
+      <end-valid-time>2016-05-15T18:00:00-07:00</end-valid-time>
+    </time-layout>
+    <parameters applicable-location="point1">
+      <temperature type="maximum" units="Fahrenheit" time-layout="k-p24h-n5-1">
+        <name>Daily Maximum Temperature</name>
+        <value>82</value>
+        <value>88</value>
+        <value>83</value>
+        <value>78</value>
+        <value>78</value>
+      </temperature>
+      <temperature type="minimum" units="Fahrenheit" time-layout="k-p24h-n5-2">
+        <name>Daily Minimum Temperature</name>
+        <value>54</value>
+        <value>56</value>
+        <value>57</value>
+        <value>56</value>
+        <value>56</value>
+      </temperature>
+      <probability-of-precipitation type="12 hour" units="percent" time-layout="k-p12h-n10-3">
+        <name>12 Hourly Probability of Precipitation</name>
+        <value>3</value>
+        <value>2</value>
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+      </probability-of-precipitation>
+      <weather time-layout="k-p12h-n10-3">
+        <name>Weather Type, Coverage, and Intensity</name>
+        <weather-conditions weather-summary="Mostly Clear"/>
+        <weather-conditions weather-summary="Mostly Sunny"/>
+        <weather-conditions weather-summary="Mostly Clear"/>
+        <weather-conditions weather-summary="Mostly Sunny"/>
+        <weather-conditions weather-summary="Mostly Clear"/>
+        <weather-conditions weather-summary="Mostly Sunny"/>
+        <weather-conditions weather-summary="Patchy Fog">
+          <value coverage="patchy" intensity="none" weather-type="fog" qualifier="none"/>
+        </weather-conditions>
+        <weather-conditions weather-summary="Mostly Sunny"/>
+        <weather-conditions weather-summary="Patchy Fog">
+          <value coverage="patchy" intensity="none" weather-type="fog" qualifier="none"/>
+        </weather-conditions>
+        <weather-conditions weather-summary="Mostly Sunny"/>
+      </weather>
+      <conditions-icon type="forecast-NWS" time-layout="k-p12h-n10-3">
+        <name>Conditions Icons</name>
+        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/nfew.jpg</icon-link>
+        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/few.jpg</icon-link>
+        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/nfew.jpg</icon-link>
+        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/few.jpg</icon-link>
+        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/nfew.jpg</icon-link>
+        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/few.jpg</icon-link>
+        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/nfg.jpg</icon-link>
+        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/few.jpg</icon-link>
+        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/nfg.jpg</icon-link>
+        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/few.jpg</icon-link>
+      </conditions-icon>
+      <hazards time-layout="k-p5d-n1-4">
+        <name>Watches, Warnings, and Advisories</name>
+        <hazard-conditions xsi:nil="true"/>
+      </hazards>
+    </parameters>
+  </data>

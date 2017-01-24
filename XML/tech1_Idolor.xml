@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+
+<semester name="Spring 2016">
+<class>
+            <department>CIT</department>
+            <title> Integrative Programming</title>            
+            <number> 270/L</number>
+            <preq>Comp 182/L , CIT 160/L</preq>
+        </class>
+<class>
+            <department>CIT</department>
+            <title> Deploy and Manage Operating Systems</title>            
+            <number> 210/L</number>
+            <preq>Comp 122/L , CIT 101/L</preq>
+        </class>
+<class>
+            <department>IS</department>
+            <title> Database Management</title>            
+            <number> 441</number>
+            <preq>IS 312</preq>
+        </class>
+<class>
+            <department>IS</department>
+            <title> Systems Development</title>            
+            <number> 451</number>
+            <preq>IS 435, IS 431</preq>
+        </class>
+</semester>
+<semester name="Fall 2016">
+        <class>
+            <department>CIT</department>
+            <title> System Administration and Management </title>            
+            <number> 360</number>
+            <preq>CIT 270/L, CIT 210/L</preq>
+        </class>
+        <class> 
+          <department>CIT</department> 
+          <title>System Design and Implementation 1</title>
+          <number> 480</number> 
+          <preq>IS 451 COMP 484/L </preq>
+        </class>
+        <class>
+        <department>ENG</department> 
+        <title>Report Writing</title> 
+        <number> 306</number> 
+        <preq>N/A</preq>
+        </class> 
+        <class>
+        <department>ENG</department> 
+        <title>History of African American Writing</title> 
+        <number> 311</number> 
+        <preq>N/A</preq>
+        </class> 
+        <class>
+        <department>KIN</department> 
+        <title>Basketball</title> 
+        <number> 124a</number> 
+        <preq>N/A</preq>
+        </class> 
+        <class>
+        <department>KIN</department> 
+        <title>Strength Training</title> 
+        <number> 126a</number> 
+        <preq>N/A</preq>
+        </class> 
+<class>
+        <department>KIN</department> 
+        <title>Swimming</title> 
+        <number> 178a</number> 
+        <preq>N/A</preq>
+        </class> 
+</semester>
+<semester name="Spring 2017">
+<class>
+        <department>COMP</department> 
+        <title>Computer System and Security</title> 
+        <number>424</number> 
+        <preq>CIT 360 IS 435</preq>
+        </class> 
+<class>
+        <department>COMP</department> 
+        <title>Web Engineering 1</title> 
+        <number>484/L</number> 
+        <preq>CIT 360 IS 451</preq>
+        </class> 
+<class>
+        <department>COMP</department> 
+        <title>Human Computer Interactions</title> 
+        <number>485</number> 
+        <preq>CIT 360 IS 451</preq>
+        </class> 
+<class>
+        <department>CIT</department> 
+        <title>System Design and Implementation 2</title> 
+        <number>481/L</number> 
+        <preq>N/A</preq>
+        </class> 
+</semester>
+</catalog>
