@@ -1,0 +1,31 @@
+Please enter the values of your tree the first one entered is your root
+    8
+    4
+    6
+    10
+    12
+    9
+    -1
+    Preorder array is equal to.
+    8
+    4
+    6
+    10
+    9
+    12
+    Inorder array is equal to.
+    4
+    6
+    8
+    9
+    10
+    12
+    Postorder array is equal to.
+    6
+    4
+    9
+    12
+    10
+    8
+    Would you like to delete a value? so please enter it now. If not then enter -1
+    -1

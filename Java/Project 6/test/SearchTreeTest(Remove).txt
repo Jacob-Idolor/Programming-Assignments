@@ -1,0 +1,54 @@
+    ----jGRASP exec: java SearchTreeMain
+    
+    Please enter the values of your tree the first one entered is your root
+    8
+    1
+    13
+    10
+    4
+    9
+    -1
+    Preorder array is equal to.
+    8
+    1
+    4
+    13
+    10
+    9
+    Inorder array is equal to.
+    1
+    4
+    8
+    9
+    10
+    13
+    Postorder array is equal to.
+    4
+    1
+    9
+    10
+    13
+    8
+    Would you like to delete a value? so please enter it now. If not then enter -1
+    1
+    Preorder array after remove is equal to.
+    8
+    4
+    13
+    10
+    9
+    Inorder array after remove is equal to.
+    4
+    8
+    9
+    10
+    13
+    Postorder array after remove is equal to.
+    4
+    9
+    10
+    13
+    8
+    
+     ----jGRASP: operation complete.
+    
