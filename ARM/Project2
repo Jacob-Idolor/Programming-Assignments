@@ -1,0 +1,149 @@
+@**************************************************************************************
+@Setting up the SWI commands 
+.equ SWI_Open, 0x66 @opens the file
+.equ SWI_PrChr,0x00 @ write an ascii char to std out to be used for output file 
+.equ SWI_PrStr, 0x69 
+.equ SWI_Close, 0x68 @close a file 
+.equ Stdout, 1 
+.equ SWI_Exit, 0x11
+.equ SWI_RdStr, 0x6a @read string from file to be used for input.txt
+.global _start
+.text
+@*************************************************************************************
+@ Register 8 will hold the characters if ABC should show 4 incluing EOL
+@register 9 will hold one char 
+@register 10 will save next one 
+@register 11 will save the third value 
+@register 6 will encode the byte 
+@register 5 will hold the index or char count 
+
+
+
+_start: 
+LDR R0,=InFileName
+MOV R1, #0
+SWI SWI_Open
+BCS ERROR
+
+LDR R1,=InFileHandle
+STR R0,[R1]
+
+LDR R0,=InFileHandle
+LDR R0,[R0]
+LDR R1,=INCharArray
+MOV R2,#1024
+SWI SWI_RdStr
+BCS ERROR
+MOV R8, R1
+B LOOP
+
+NEXTCHARINSTR:
+LDR R0,=INCharArray
+ADD R0,R0, #3
+MOV R5, #0
+MOV R8 , R0
+B LOOP
+
+
+LOOP:@compare the value if it does not equal total chars
+LDRB R9,[R8]
+ADD R8, R8, #1
+MOV R9, R9, LSL #8 
+LDRB R10,[R8]
+ORR R9,R10,R9
+MOV R9, R9, LSL #8 
+ADD R8, R8, #1 
+LDRB R10,[R8] 
+ORR R9,R10,R9
+MOV R9,R9,ROR #18 
+AND R6,R9,#0x3F
+B STORECHAR
+NEXTCHARLOOP:
+CMP R5, #4
+BEQ OUTPUT
+MOV R9,R9,ROR #26
+AND R6,R9,#0x3f 
+BAl STORENEXT
+
+
+
+
+STORECHAR:@R5 dont forget to reset it to 0 when getting next three
+ADD R5, R5, #1
+MOV R1,R6
+LDR R1,=LookUpTable
+ADD R1,R1,R6
+LDRB R0,[R1]
+LDR R8,=OUTCharArray
+STRB R0,[R8]
+ADD R8,R8, #1
+SWI SWI_PrChr
+B NEXTCHARLOOP
+
+
+STORENEXT:
+ADD R5, R5, #1
+MOV R1,R6
+LDR R1,=LookUpTable
+ADD R1,R1,R6
+CMP R1,#65
+beq PAD
+CONT:
+LDRB R0,[R1]
+MOV R7,R0
+STRB R7,[R8]
+ADD R8,R8, #1
+SWi SWI_PrChr
+B NEXTCHARLOOP
+
+
+
+
+OUTPUT:
+
+LDR R0,=OutFileName 
+MOV R1, #1
+SWI SWI_Open 
+BCS ERROR 
+
+LDR R1,=OutFileHandle
+STR R0, [R1]
+
+
+LDR R0, =OutFileHandle
+LDR R0,[R0]
+LDR  R1, =OUTCharArray
+SWI SWI_PrStr
+B NEXTCHARINSTR
+
+PAD:
+MOV R1,#61
+B CONT
+
+
+ERROR: 
+LDR R0,=InError
+MOV R1, #1
+SWI SWI_PrStr
+B END
+
+
+END:
+SWI SWI_Exit
+@*************************************************************************************
+.data
+.align
+InFileName: .asciz "input.txt" 
+OutFileName: .asciz "Output64.txt"
+InFileHandle: .word 0 
+OutFileHandle: .word 0 
+INCharArray: .skip  1024
+OUTCharArray: .skip 1024 
+InError: .asciz "File Error" 
+OutFileError: .asciz "File Error" 
+FileOpenInpErrMsg: .asciz "Filed to open file\n"
+LookUpTable: .asciz "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+Space: .asciz " "
+NL: .asciz "\n"
+.end
+
